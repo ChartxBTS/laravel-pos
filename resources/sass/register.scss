@@ -1,0 +1,183 @@
+/* ===== Google Font Import - Poformsins ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0aede;
+}
+
+.container {
+    position: relative;
+    max-width: 580px;  /* Reducir el tamaño del contenedor */
+    width: 100%;
+    background: #fff;
+    border-radius: 8px;  /* Hacer los bordes más suaves */
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 0 15px;  /* Reducir márgenes */
+}
+
+.container .forms {
+    display: flex;
+    align-items: center;
+    height: 530px;  /* Reducir la altura */
+    width: 200%;
+    transition: height 0.2s ease;
+}
+
+.container .form {
+    width: 50%;
+    padding: 20px;  /* Reducir el padding */
+    background-color: #fff;
+    transition: margin-left 0.18s ease;
+}
+
+.container.active .login {
+    margin-left: -50%;
+    opacity: 0;
+    transition: margin-left 0.18s ease, opacity 0.15s ease;
+}
+
+.container .signup {
+    opacity: 0;
+    transition: opacity 0.09s ease;
+}
+
+.container.active .signup {
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.container.active .forms {
+    height: 520px;  /* Ajustar la altura */
+}
+
+.container .form .title {
+    position: relative;
+    font-size: 22px;  /* Reducir tamaño de fuente */
+    font-weight: 600;
+}
+
+.form .title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;  /* Reducir el grosor */
+    width: 25px;  /* Reducir el tamaño */
+    background-color: #f0aede;
+    border-radius: 25px;
+}
+
+.form .input-field {
+    position: relative;
+    height: 40px;  /* Reducir la altura */
+    width: 100%;
+    margin-top: 20px;  /* Reducir margen */
+}
+
+.input-field input {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 30px;  /* Reducir padding */
+    border: none;
+    outline: none;
+    font-size: 14px;  /* Reducir tamaño de fuente */
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid) {
+    border-bottom-color: #f0aede;
+}
+
+.input-field i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 20px;  /* Reducir el tamaño del icono */
+    transition: all 0.2s ease;
+}
+
+.input-field input:is(:focus, :valid)~i {
+    color: #f0aede;
+}
+
+.input-field i.icon {
+    left: 0;
+}
+
+.input-field i.showHidePw {
+    right: 0;
+    cursor: pointer;
+    padding: 8px;  /* Reducir el padding */
+}
+
+.form .checkbox-text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;  /* Reducir margen */
+}
+
+.checkbox-text .checkbox-content {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-content input {
+    margin-right: 8px;  /* Reducir margen */
+    accent-color: #4070f4;
+}
+
+.form .text {
+    color: #333;
+    font-size: 12px;  /* Reducir tamaño de fuente */
+}
+
+.form a.text {
+    color: #f0aede;
+    text-decoration: none;
+}
+
+.form a:hover {
+    text-decoration: underline;
+}
+
+.form .button {
+    margin-top: 25px;  /* Reducir margen */
+}
+
+.form .button input {
+    border: none;
+    color: #fff;
+    font-size: 14px;  /* Reducir tamaño de fuente */
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: #ee8ad3;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button input:hover {
+    background-color: #f0aede;
+}
+
+.form .login-signup {
+    margin-top: 20px;  /* Reducir margen */
+    text-align: center;
+}
